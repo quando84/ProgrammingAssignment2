@@ -42,12 +42,12 @@ makeCacheMatrix <- function( m = matrix() ) {
 ## If the inverse has already been calculated, use "cachesolve" to retrieve the inverse from the cache.
 cacheSolve <- function(input, ...) {
   
-  ## Return a matrix that is the inverse of 'input'
+  ## Return a matrix that is the inverse of 'input' object
   m <- input$getInverse()
   
   ## Return the inverse if its already set; otherwise if null, skip.
   if( !is.null(m) ) {
-    message("getting cached data")
+    message("Cached data still being retrieved. Waiting...")
     return(m)
   }
   
@@ -57,7 +57,7 @@ cacheSolve <- function(input, ...) {
   ## Calculate the inverse by using matrix multiplication
   m <- solve(data) %*% data
   
-  ## Set the inverse to the 'input'
+  ## Set the inverse to the 'input' object
   input$setInverse(m)
   
   ## Return the matrix
