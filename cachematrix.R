@@ -1,5 +1,8 @@
 ## Assignment 2: Lexical Scoping
 ## Objective: To develop a pair of functions that cache the inverse of a matrix
+## Functions: 
+## 1. makeCacheMatrix = function that creates a special matrix object that can cache its inverse
+## 2. cacheSolve = function that computes inverse of the matrix returned by "makeCacheMatrix" function above
 
 ## Creates a special matrix object that can cache its inverse
 makeCacheMatrix <- function( m = matrix() ) {
